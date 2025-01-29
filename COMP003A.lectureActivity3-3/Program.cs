@@ -78,6 +78,30 @@ namespace COMP003A.lectureActivity3_3
                 Console.WriteLine(i);
             }
 
+            // Prompt user to restart program
+            Console.Write("Enter 'restart' to try again or any other key to exit: ");
+            // Convert response to lowercase
+            string restart = Console.ReadLine().ToLower();
+            
+            // Check if  user wants to restart program
+            if (restart == "restart")
+            {
+                 // Restart program
+                 goto Restart;
+            }
+            else
+            { 
+                // Terminate program
+                System.Environment.Exit(0);
+            }
+
+        // Label to restart program
+        Restart:
+            // Display message and restart program
+            Console.WriteLine("Restarting the program...\n");
+            // Restart program
+            Main(args);
+
         }   
     }
 }
