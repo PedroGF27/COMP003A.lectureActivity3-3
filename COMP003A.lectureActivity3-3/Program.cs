@@ -28,7 +28,16 @@ namespace COMP003A.lectureActivity3_3
                 }
             }
 
+            Console.Write("Would you like to skip a number? (yes/no): "); // Get user's preferences for skipping and terminating loop
+            string skipResponse = Console.ReadLine().ToLower(); // Convert response to lowercase
+            int skipNumber = 0; // Check if user wants to skip number
+            if (skipResponse == "yes")
+            {
+                Console.Write("Enter the number to skip: "); // Prompt user to enter number to skip
+                skipNumber = int.Parse(Console.ReadLine()); // Parse input to an integer
 
+
+            }
 
         }
     }
