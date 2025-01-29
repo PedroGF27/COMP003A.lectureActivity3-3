@@ -54,7 +54,30 @@ namespace COMP003A.lectureActivity3_3
                 // Parse input to an integer
                 terminateNumber = int.Parse(Console.ReadLine());
             }
-        
+
+            // Display the output
+            Console.WriteLine("\nOutput:");
+            // Iterate through range of numbers
+            for (int i = 1; i <= range; i++)
+            {
+                // Check if current number is the number to skip
+                if (i == skipNumber)
+                {
+                    continue; // Skip specified number
+                }
+
+                // Check if current number is the number to terminate
+                if (i == terminateNumber)
+                {
+                    // Display message and break out of loop
+                    Console.WriteLine($"Loop terminated at number {terminateNumber}.");
+                    break; // Terminate loop
+                }
+
+                // Display current number
+                Console.WriteLine(i);
+            }
+
         }   
     }
 }
