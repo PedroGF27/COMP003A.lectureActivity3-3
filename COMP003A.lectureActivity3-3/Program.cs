@@ -33,12 +33,28 @@ namespace COMP003A.lectureActivity3_3
             int skipNumber = 0; // Check if user wants to skip number
             if (skipResponse == "yes")
             {
+                //
                 Console.Write("Enter the number to skip: "); // Prompt user to enter number to skip
                 skipNumber = int.Parse(Console.ReadLine()); // Parse input to an integer
 
 
             }
 
-        }
+            // Get user's preferences for terminating loop
+            Console.Write("Would you like to terminate the loop at a specific number? (yes/no): ");
+            // Convert response to lowercase
+            string terminateResponse = Console.ReadLine().ToLower();
+            // Initialize termination to 0
+            int terminateNumber = 0;
+            // Check if user wants to terminate loop
+            if (terminateResponse == "yes")
+            {
+                // Prompt user to enter termination number
+                Console.Write("Enter the termination number: ");
+                // Parse input to an integer
+                terminateNumber = int.Parse(Console.ReadLine());
+            }
+        
+        }   
     }
 }
